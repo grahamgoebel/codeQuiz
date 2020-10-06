@@ -1,74 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id = "quiz"></div>
-    <button id = "submit">Submit Quiz</button>
-    <div id = "results"></div>
-
-<script>
-const quizContainer = document.getElementById("quiz");
-const submitButton = document.getElementById("submit");
-const resultsContainer = document.getElementById("results");
-
-function buildQuiz(){}
-
-function showResults(){}
-
-// display quiz
-buildQuiz();
-
-// show results when submit is clicked
-submitButton.addEventListener("click", showResults);
-
-
-const myQuestions = [ {
-
-    question: "Is Javascript a front-end, back-end, or full-stack programming language?",
-    answers: {
-        a: "front-end",
-        b: "back-end",
-        c: "full-stack"
-    },
-    correctAnswer: "c"
-},
-{
-    question: "What symbol is used to denote the start and end of a function?",
-    answers: {
-        a: "parentheses",
-        b: "curly brackets",
-        c: "angle brackets"
-    },
-    correctAnswer: "b"
-},
-{
-    question: "What symbol is used to denote the start and end of an array?",
-    answers: {
-        a: "brackets",
-        b: "angle brackets",
-        c: "parentheses"
-    },
-    correctAnswer: "a"
-},
-{
-question: "What function is used to print output to the console?",
-    answers: {
-        a: "preventDefault",
-        b: "console.log",
-        c: "print"
-    },
-    correctAnswer: "b"
-},
-
-
-]
-
-
-</script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scores">Highscores</div>
+    <div class="timer">Time: <span id="time">0</span></div>
+    <div class="wrapper">
+      <div id="start-screen" class="start">
+        <h1>Coding Quiz</h1>
+        <p>
+          Press "Start Quiz" to begin the timed Quiz.
+        </p>
+        <button id="start">Start Quiz</button>
+      </div>
+      <div id="questions" class="hide">
+        <h2 id="question-title"></h2>
+        <div id="choices" class="choices"></div>
+      </div>
+      <div id="end-screen" class="hide">
+        <h2>The End</h2>
+        <p>
+        </p>
+      </div>
+      <div id="feedback" class="feedback hide"></div>
+    </div>
+    <script src="./assets/js/logic.js"></script>
+    <script src="./assets/js/quiz.js"></script>
+  </body>
 </html>
